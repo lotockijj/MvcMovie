@@ -8,16 +8,18 @@ namespace MvcMovie.Controllers
     {
         // 
         // GET: /HelloWorld/
-        public IActionResult Index()
+        public IActionResult Index(int numTimes)
         {
+            ViewData["Message"] = "Hip hip hooray!!! :)";
+            ViewData["HowManyTimes"] = numTimes;
             return View();
         }
 
         // GET: /HelloWorld/Welcome/ 
         // Requires using System.Text.Encodings.Web;
-        public IActionResult Welcome(string name, int numTimes = 1)
+        public IActionResult Welcome(string name, int numTimes = 1, int ID = 3)
         {
-            ViewData["Message"] = "Hello " + name;
+            ViewData["Message"] = "Hello " + name + ", ID: " + ID;
             ViewData["NumTimes"] = numTimes;
 
             return View();
