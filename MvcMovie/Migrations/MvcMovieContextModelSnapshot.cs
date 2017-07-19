@@ -21,39 +21,19 @@ namespace MvcMovie.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Genre")
-                        .IsRequired()
-                        .HasMaxLength(30);
+                    b.Property<string>("Genre");
 
                     b.Property<decimal>("Price");
 
-                    b.Property<string>("Rating")
-                        .HasMaxLength(5);
+                    b.Property<string>("Rating");
 
                     b.Property<DateTime>("ReleaseDate");
 
-                    b.Property<string>("Title")
-                        .HasMaxLength(60);
+                    b.Property<string>("Title");
 
                     b.HasKey("ID");
 
                     b.ToTable("Movie");
-                });
-
-            modelBuilder.Entity("MvcMovie.Models.User", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("name")
-                        .HasMaxLength(60);
-
-                    b.Property<string>("password")
-                        .HasMaxLength(60);
-
-                    b.HasKey("ID");
-
-                    b.ToTable("User");
                 });
         }
     }

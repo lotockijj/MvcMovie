@@ -23,13 +23,6 @@ namespace MvcMovie.Controllers
             return View();
         }
 
-        public IActionResult LogIn()
-        {
-            ViewData["Message"] = "Your log in page.";
-
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View();

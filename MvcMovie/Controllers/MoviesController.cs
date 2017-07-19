@@ -170,6 +170,5 @@ namespace MvcMovie.Controllers
         {
             return _context.Movie.Any(e => e.ID == id);
         }
-
     }
 }
